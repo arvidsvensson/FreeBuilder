@@ -70,7 +70,7 @@ String jackson(String pkg) {
 
 if (System.env.CI == 'true') {
   test {
-    forkEvery = 20
+    maxHeapSize = "1024m"
   }
   tasks.withType(Test) {
     testLogging {
